@@ -7,8 +7,6 @@ function continueGame() {
 
     // set background
     setBackgroundColorById(alphabet);
-
-
 }
 function play() {
     addElementById('home-screen');
