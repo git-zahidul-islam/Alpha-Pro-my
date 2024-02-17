@@ -6,14 +6,30 @@ function handleKeyboardButtonPressed(event) {
     const display = displayAlphabet.innerText.toLowerCase()
     if (pressedKey === display) {
         displayAlphabet.innerText = display
-        // score increese 
-        
+        const currentScore = getTextElementValueById('current-score');
+        const updateScore = currentScore + 1;
+        setTextElementValueById('current-score',updateScore);
+        // // score increese 
+        // const currentScoreElement = document.getElementById('current-score');
+        // const currentScoreText = currentScoreElement.innerText;
+        // const currentScore = parseInt(currentScoreText);
+        // // new score
+        // const newScore = currentScore + 1;
+        // // showing score
+        // currentScoreElement.innerText = newScore;
 
         removeBackgroundColorById(display)
         continueGame()
     }
     else {
-        console.log('you are looser')
+        // const currentLifeElement = document.getElementById('current-life');
+        // const currentLifeText = currentLifeElement.innerText;
+        // const currentLife = parseInt(currentLifeText);
+        // // new life 
+        // const newLife = currentLife - 1;
+        // // showing element
+        // currentLifeElement.innerText = newLife;
+
     }
 }
 document.addEventListener('keyup', handleKeyboardButtonPressed)
